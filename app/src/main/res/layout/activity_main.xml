@@ -21,10 +21,15 @@
 
         <android.support.v7.widget.AppCompatEditText
             android:id="@+id/edt_content"
-            android:hint="Title"
+            android:hint="Content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_save"
+            android:hint="save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     </android.support.v7.widget.LinearLayoutCompat>
 
