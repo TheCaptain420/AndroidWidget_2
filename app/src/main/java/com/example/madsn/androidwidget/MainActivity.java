@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     EditText edtTitle,edtContent;
 
     //wifi
-    Button btn_wifiOn, btn_wifiOff;
+    Button btn_wifiOn, btn_wifiOff,btn_wifiAuto;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
         edtTitle = (EditText)findViewById(R.id.edt_title);
         edtContent = (EditText) findViewById(R.id.edt_content);
 
+        //wifi
         btn_wifiOn = (Button)findViewById(R.id.wifi_on);
         btn_wifiOff = (Button)findViewById(R.id.wifi_off);
-
+        btn_wifiAuto = (Button)findViewById(R.id.btn_autowifi);
 
 
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +70,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_wifiAuto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("tsm button pressed wifi auto");
+                WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                if(wifi.isWifiEnabled()){
+                    wifi.setWifiEnabled(false); // true or false to activate/deactivate wifi
+                }else{
+                    wifi.setWifiEnabled(true); // true or false to activate/deactivate wifi
+                }
+
+            }
+        });
 
 
 
