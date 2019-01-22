@@ -1,2 +1,4 @@
 Hello tester.
-Få den til at auto update :D
+-Få den til at auto update, med texten
+-Få den til at tænde WIFI
+-Få den til at tænde 3G
